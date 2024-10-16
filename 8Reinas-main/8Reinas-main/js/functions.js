@@ -102,20 +102,21 @@ function solucion3(){
             background-size:contain; 
             background-repeat:no-repeat; 
             background-position:center;`;
-    celda.rows[0].cells[3].style=estai;
-    celda.rows[1].cells[1].style=estai;
-    celda.rows[2].cells[6].style=estai;
-    celda.rows[3].cells[2].style=estai;
-    celda.rows[4].cells[5].style=estai;
-    celda.rows[5].cells[7].style=estai;
-    celda.rows[6].cells[4].style=estai;
-    celda.rows[7].cells[0].style=estai;
+    celda.rows[0].cells[2].style = estai;  
+    celda.rows[1].cells[5].style = estai; 
+    celda.rows[2].cells[7].style = estai;  
+    celda.rows[3].cells[0].style = estai;  
+    celda.rows[4].cells[3].style = estai;  
+    celda.rows[5].cells[6].style = estai;  
+    celda.rows[6].cells[4].style = estai;
+    celda.rows[7].cells[1].style = estai;
 
 }
 
 function soluciones() {
     var solucion=document.getElementById("solution").value;
     switch (solucion) {
+
         case "1":
             solucion1();
             break;
@@ -125,7 +126,7 @@ function soluciones() {
                 break;
         
             case "3":
-                solucion2();
+                solucion3();
                 break;
         default:
             limpiecito();
@@ -136,6 +137,8 @@ function soluciones() {
 function limpiecito(){
     var celda=document.getElementById("tablero").getElementsByTagName("td");
     for (let i = 0; i < celda.length; i++) {
-        celda[i].style="background-image:none;";
+        celda[i].style = "background-image:none;";
+        document.getElementById("contador").innerHTML = `Contador: ${contador = 0}`;
     }
+    
 }
